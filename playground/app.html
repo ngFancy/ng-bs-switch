@@ -1,0 +1,66 @@
+<form class="form-horizontal">
+    <div class="form-group">
+        <label class="control-label col-sm-2">simple</label>
+        <div class="col-sm-2">
+            <ng-bs-switch on-text="'locked'" off-text="'unlocked'" ng-model="$ctrl.checked"></ng-bs-switch>
+        </div>
+        <div class="col-sm-2">
+            <p class="form-control-static">{{$ctrl.checked}}</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-sm-2">sized</label>
+        <div class="col-sm-3">
+            <label class="radio-inline">
+                <input type="radio" name="sizeSelect" ng-model="$ctrl.size" value="lg"> lg
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="sizeSelect" ng-model="$ctrl.size" value="sm"> sm
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="sizeSelect" ng-model="$ctrl.size" value="xs"> xs
+            </label>
+        </div>
+        <div class="col-sm-2">
+            <ng-bs-switch on-text="'ON'" off-text="'OFF'" ng-model="$ctrl.checked" size="$ctrl.size"></ng-bs-switch>
+        </div>
+        <div class="col-sm-2">
+            <p class="form-control-static">{{$ctrl.checked}}</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-sm-2">label class</label>
+        <div class="col-sm-3">
+            <label class="radio-inline">
+                <input type="radio" name="labelClassSelect" ng-model="$ctrl.labelClass" value="primary"> primary
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="labelClassSelect" ng-model="$ctrl.labelClass" value="warning"> warning
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="labelClassSelect" ng-model="$ctrl.labelClass" value="info"> info
+            </label>
+        </div>
+        <div class="col-sm-2">
+            <ng-bs-switch on-text="'ON'" off-text="'OFF'" ng-model="$ctrl.checked" on-text-style="$ctrl.labelClass"></ng-bs-switch>
+        </div>
+        <div class="col-sm-2">
+            <p class="form-control-static">{{$ctrl.checked}}</p>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="control-label col-sm-2">label text</label>
+        <div class="col-sm-1">
+            <input type="text" class="form-control" ng-model="$ctrl.labelOnText">
+        </div>
+        <div class="col-sm-1">
+            <input type="text" class="form-control" ng-model="$ctrl.labelOffText">
+        </div>
+        <div class="col-sm-2">
+            <ng-bs-switch on-text="$ctrl.labelOnText" off-text="$ctrl.labelOffText" ng-model="$ctrl.checked"></ng-bs-switch>
+        </div>
+        <div class="col-sm-2">
+            <p class="form-control-static">{{$ctrl.checked}}</p>
+        </div>
+    </div>
+</form>
