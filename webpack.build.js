@@ -20,6 +20,11 @@ module.exports = {
         chunkFilename: '[id].chunk.js',
         libraryTarget: 'umd',
     },
+    externals: {
+        // require("jquery") is external and available
+        //  on the global var jQuery
+        "angular": "angular"
+    },
     // Options affecting the resolving of modules.
     //
     // See: http://webpack.github.io/docs/configuration.html#resolve
