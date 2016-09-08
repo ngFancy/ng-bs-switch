@@ -1,0 +1,81 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+
+.ng-bs-switch-container {
+  display: inline-block;
+  box-sizing: border-box;
+  background-color: #fff;
+  white-space: nowrap;
+  cursor: pointer;
+  touch-action: manipulation;
+  border: 1px solid $gray-lighter;
+  overflow: hidden;
+  position: relative;
+  vertical-align: middle;
+  margin-bottom: 0;
+  @include switch-size($padding-base-vertical, $padding-base-horizontal, $font-size-base, $line-height-computed, $btn-border-radius-base);
+  @include user-select(none);
+
+  @include form-control-focus;
+
+  .switch-wrapper {
+    display: inline-block;
+    overflow: visible;
+    white-space: nowrap;
+    position: absolute;
+    left: 0;
+    top: 0;
+    &.animated {
+      transition: all 200ms linear;
+    }
+  }
+
+  .switch-button {
+    display: inline-block;
+    vertical-align: middle;
+    background-image: none; // Reset unusual Firefox-on-Android default style; see https://github.com/necolas/normalize.css/issues/214
+  }
+  .switch-label {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+
+    &.default {
+      @include text-variant($gray-lighter, $btn-default-color);
+    }
+
+    &.primary {
+      @include text-variant($btn-primary-bg, $btn-primary-color);
+    }
+
+    &.info {
+      @include text-variant($btn-info-bg, $btn-info-color);
+    }
+
+    &.success {
+      @include text-variant($btn-success-bg, $btn-success-color);
+    }
+
+    &.warning {
+      @include text-variant($btn-warning-bg, $btn-warning-color);
+    }
+
+    &.danger {
+      @include text-variant($btn-danger-bg, $btn-danger-color);
+    }
+  }
+
+  &.lg {
+    // line-height: ensure even-numbered height of button next to large input
+    @include switch-size($padding-large-vertical, $padding-large-horizontal, $font-size-large, $line-height-large, $btn-border-radius-large);
+  }
+  &.sm {
+    // line-height: ensure proper height of button next to small input
+    @include switch-size($padding-small-vertical, $padding-small-horizontal, $font-size-small, $line-height-small, $btn-border-radius-small);
+  }
+  &.xs {
+    @include switch-size($padding-xs-vertical, $padding-xs-horizontal, $font-size-small, $line-height-small, $btn-border-radius-small);
+  }
+}

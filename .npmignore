@@ -1,0 +1,10 @@
+.idea
+.coverage
+node_modules
+playground
+test
+webpack.build.js
+webpack.dev.js
+webpack.test.js
+helpers.js
+karma.conf.js

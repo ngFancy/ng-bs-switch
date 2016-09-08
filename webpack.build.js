@@ -10,7 +10,7 @@ module.exports = {
     devtool: 'cheap-module-source-map',
 
     entry: {
-        'ng-gridview': './src/gridview.ts'
+        'ng-bs-switch': './src/ng-bs-switch.ts'
     },
 
     output: {
@@ -18,7 +18,6 @@ module.exports = {
         filename: '[name].js',
         sourceMapFilename: '[name].map',
         chunkFilename: '[id].chunk.js',
-        // library: 'ngGridview',
         libraryTarget: 'umd',
     },
     // Options affecting the resolving of modules.
@@ -104,20 +103,16 @@ module.exports = {
             {
                 test: /\.scss/,
                 loader: 'css-loader!sass-loader'
-            },
-            {
+            }, {
                 test: /\.eot(\?.+)?$/,
                 loader: "file"
-            },
-            {
+            }, {
                 test: /\.(woff|woff2)(\?.+)?$/,
                 loader: "url?limit=5000&minetype=application/font-woff"
-            },
-            {
+            }, {
                 test: /\.ttf(\?.+)?$/,
                 loader: "url?limit=10000&mimetype=application/octet-stream"
-            },
-            {
+            }, {
                 test: /\.svg(\?.+)?$/,
                 loader: "url?limit=10000&mimetype=image/svg+xml"
             }
@@ -126,14 +121,17 @@ module.exports = {
 
     plugins: [
         new CopyWebpackPlugin([{
-            from: 'src/gridview.d.ts',
-            to: './ng-gridview.d.ts'
+            from: 'src/ng-bs-switch.scss',
+            to: './ng-bs-switch.scss'
         }, {
-            from: 'src/gridview.scss',
-            to: './ng-gridview.scss'
+            from: 'src/_variables.scss',
+            to: './_variables.scss'
+        }, {
+            from: 'src/_mixins.scss',
+            to: './_mixins.scss'
         }])
     ],
-    
+
     node: {
         global: 'window',
         crypto: 'empty',

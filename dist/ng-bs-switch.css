@@ -1,0 +1,109 @@
+.ng-bs-switch-container {
+  display: inline-block;
+  box-sizing: border-box;
+  background-color: #fff;
+  white-space: nowrap;
+  cursor: pointer;
+  touch-action: manipulation;
+  border: 1px solid #eeeeee;
+  overflow: hidden;
+  position: relative;
+  vertical-align: middle;
+  margin-bottom: 0;
+  border-radius: 4px;
+  height: 32px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+  .ng-bs-switch-container .switch-button {
+    width: 32px;
+    height: 32px;
+    line-height: 20px;
+    padding: 0;
+    margin: 0; }
+  .ng-bs-switch-container .switch-label {
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 20px; }
+  .ng-bs-switch-container:focus {
+    border-color: #66afe9;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(102, 175, 233, 0.6); }
+  .ng-bs-switch-container .switch-wrapper {
+    display: inline-block;
+    overflow: visible;
+    white-space: nowrap;
+    position: absolute;
+    left: 0;
+    top: 0; }
+    .ng-bs-switch-container .switch-wrapper.animated {
+      transition: all 200ms linear; }
+  .ng-bs-switch-container .switch-button {
+    display: inline-block;
+    vertical-align: middle;
+    background-image: none; }
+  .ng-bs-switch-container .switch-label {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap; }
+    .ng-bs-switch-container .switch-label.default {
+      background-color: #eeeeee;
+      color: #333; }
+    .ng-bs-switch-container .switch-label.primary {
+      background-color: #337ab7;
+      color: #fff; }
+    .ng-bs-switch-container .switch-label.info {
+      background-color: #5bc0de;
+      color: #fff; }
+    .ng-bs-switch-container .switch-label.success {
+      background-color: #5cb85c;
+      color: #fff; }
+    .ng-bs-switch-container .switch-label.warning {
+      background-color: #f0ad4e;
+      color: #fff; }
+    .ng-bs-switch-container .switch-label.danger {
+      background-color: #d9534f;
+      color: #fff; }
+  .ng-bs-switch-container.lg {
+    border-radius: 6px;
+    height: 38px; }
+    .ng-bs-switch-container.lg .switch-button {
+      width: 38px;
+      height: 38px;
+      line-height: 18px;
+      padding: 0;
+      margin: 0; }
+    .ng-bs-switch-container.lg .switch-label {
+      padding: 10px 16px;
+      font-size: 18px;
+      line-height: 18px; }
+  .ng-bs-switch-container.sm {
+    border-radius: 3px;
+    height: 31px; }
+    .ng-bs-switch-container.sm .switch-button {
+      width: 31px;
+      height: 31px;
+      line-height: 21px;
+      padding: 0;
+      margin: 0; }
+    .ng-bs-switch-container.sm .switch-label {
+      padding: 5px 10px;
+      font-size: 12px;
+      line-height: 21px; }
+  .ng-bs-switch-container.xs {
+    border-radius: 3px;
+    height: 23px; }
+    .ng-bs-switch-container.xs .switch-button {
+      width: 23px;
+      height: 23px;
+      line-height: 21px;
+      padding: 0;
+      margin: 0; }
+    .ng-bs-switch-container.xs .switch-label {
+      padding: 1px 5px;
+      font-size: 12px;
+      line-height: 21px; }

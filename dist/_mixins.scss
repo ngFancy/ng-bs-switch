@@ -1,0 +1,42 @@
+@mixin switch-size($padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius) {
+  border-radius: $border-radius;
+  height: ($line-height + $padding-vertical * 2);
+  .switch-button {
+    width: ($line-height + $padding-vertical * 2);
+    height: ($line-height + $padding-vertical * 2);
+    line-height: $line-height;
+    padding: 0;
+    margin: 0;
+  }
+  .switch-label {
+    padding: $padding-vertical $padding-horizontal;
+    font-size: $font-size;
+    line-height: $line-height;
+  }
+}
+
+@mixin text-variant($background, $color) {
+  background-color: $background;
+  color: $color;
+}
+
+@mixin user-select($select) {
+  -webkit-user-select: $select;
+  -moz-user-select: $select;
+  -ms-user-select: $select; // IE10+
+  user-select: $select;
+}
+
+@mixin box-shadow($shadow...) {
+  -webkit-box-shadow: $shadow; // iOS <4.3 & Android <4.1
+  box-shadow: $shadow;
+}
+
+@mixin form-control-focus($color: $input-border-focus) {
+  $color-rgba: rgba(red($color), green($color), blue($color), .6);
+  &:focus {
+    border-color: $color;
+    outline: 0;
+    @include box-shadow(inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px $color-rgba);
+  }
+}
