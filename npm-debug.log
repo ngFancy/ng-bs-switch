@@ -1,0 +1,164 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/Users/bob/.nvm/versions/node/v5.5.0/bin/node',
+1 verbose cli   '/Users/bob/.nvm/versions/node/v5.5.0/bin/npm',
+1 verbose cli   'publish',
+1 verbose cli   '--access',
+1 verbose cli   'public' ]
+2 info using npm@3.8.9
+3 info using node@v5.5.0
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/Users/bob/WebstormProjects/ng-bs-switch',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /Users/bob/.npm/@ngfancy/ng-bs-switch/1.0.2/package.tgz not in flight; packing
+9 verbose correctMkdir /Users/bob/.npm correctMkdir not in flight; initializing
+10 info lifecycle @ngfancy/ng-bs-switch@1.0.2~prepublish: @ngfancy/ng-bs-switch@1.0.2
+11 silly lifecycle @ngfancy/ng-bs-switch@1.0.2~prepublish: no script for prepublish, continuing
+12 verbose tar pack [ '/Users/bob/.npm/@ngfancy/ng-bs-switch/1.0.2/package.tgz',
+12 verbose tar pack   '/Users/bob/WebstormProjects/ng-bs-switch' ]
+13 verbose tarball /Users/bob/.npm/@ngfancy/ng-bs-switch/1.0.2/package.tgz
+14 verbose folder /Users/bob/WebstormProjects/ng-bs-switch
+15 verbose addLocalTarball adding from inside cache /Users/bob/.npm/@ngfancy/ng-bs-switch/1.0.2/package.tgz
+16 verbose correctMkdir /Users/bob/.npm correctMkdir not in flight; initializing
+17 silly cache afterAdd @ngfancy/ng-bs-switch@1.0.2
+18 verbose afterAdd /Users/bob/.npm/@ngfancy/ng-bs-switch/1.0.2/package/package.json not in flight; writing
+19 verbose correctMkdir /Users/bob/.npm correctMkdir not in flight; initializing
+20 verbose afterAdd /Users/bob/.npm/@ngfancy/ng-bs-switch/1.0.2/package/package.json written
+21 silly publish { name: '@ngfancy/ng-bs-switch',
+21 silly publish   version: '1.0.2',
+21 silly publish   description: 'A switch for angular with bootstrap',
+21 silly publish   main: 'dist/ng-bs-switch.js',
+21 silly publish   scripts:
+21 silly publish    { rimraf: 'rimraf',
+21 silly publish      typings: 'typings',
+21 silly publish      webpack: 'webpack',
+21 silly publish      'webpack-dev-server': 'webpack-dev-server',
+21 silly publish      sass: 'node-sass',
+21 silly publish      clean: 'npm cache clean && npm run rimraf -- node_modules doc typings coverage dist',
+21 silly publish      'clean:dist': 'npm run rimraf -- dist',
+21 silly publish      'preclean:install': 'npm run clean',
+21 silly publish      'clean:install': 'npm set progress=false && npm install',
+21 silly publish      'preclean:start': 'npm run clean',
+21 silly publish      'clean:start': 'npm start',
+21 silly publish      prebuild: 'npm run clean:dist',
+21 silly publish      build: 'npm run build:dist && npm run sass dist/ng-bs-switch.scss dist/ng-bs-switch.css',
+21 silly publish      'build:dist': 'webpack --config webpack.build.js --progress --profile --colors --display-error-details --display-cached --bail',
+21 silly publish      postbuild: 'mv dist/src/ng-bs-switch.d.ts dist/ng-bs-switch.d.ts && rm -rf dist/src',
+21 silly publish      server: 'npm run server:dev',
+21 silly publish      'server:dev': 'webpack-dev-server --config webpack.dev.js --inline --progress --profile --colors --watch --display-error-details --display-cached --content-base src/',
+21 silly publish      'server:dev:hmr': 'npm run server:dev -- --hot',
+21 silly publish      start: 'npm run server:dev',
+21 silly publish      test: 'karma start' },
+21 silly publish   author: { name: 'Bob' },
+21 silly publish   license: 'MIT',
+21 silly publish   dependencies: {},
+21 silly publish   devDependencies:
+21 silly publish    { '@types/angular': '^1.5.13',
+21 silly publish      '@types/angular-mocks': '^1.5.4',
+21 silly publish      '@types/mocha': '^2.2.31',
+21 silly publish      '@types/node': '^6.0.38',
+21 silly publish      '@types/webpack': '^1.12.33',
+21 silly publish      angular: '^1.5.8',
+21 silly publish      'angular-mocks': '^1.5.8',
+21 silly publish      'awesome-typescript-loader': '^2.2.1',
+21 silly publish      'bootstrap-sass': '^3.3.7',
+21 silly publish      chai: '^3.5.0',
+21 silly publish      'copy-webpack-plugin': '^2.1.3',
+21 silly publish      'css-loader': '^0.23.1',
+21 silly publish      'file-loader': '^0.8.5',
+21 silly publish      'html-webpack-plugin': '^2.16.0',
+21 silly publish      'istanbul-instrumenter-loader': '^0.2.0',
+21 silly publish      'json-loader': '^0.5.4',
+21 silly publish      karma: '^1.2.0',
+21 silly publish      'karma-chrome-launcher': '^2.0.0',
+21 silly publish      'karma-coverage': '^1.1.1',
+21 silly publish      'karma-mocha': '^1.1.1',
+21 silly publish      'karma-mocha-reporter': '^2.1.0',
+21 silly publish      'karma-phantomjs-launcher': '^1.0.2',
+21 silly publish      'karma-sourcemap-loader': '^0.3.7',
+21 silly publish      'karma-webpack': '^1.8.0',
+21 silly publish      mocha: '^3.0.2',
+21 silly publish      'node-sass': '^3.6.0',
+21 silly publish      'raw-loader': '^0.5.1',
+21 silly publish      'remap-istanbul': '^0.6.4',
+21 silly publish      rimraf: '^2.5.2',
+21 silly publish      'sass-loader': '^3.2.0',
+21 silly publish      sinon: '^1.17.5',
+21 silly publish      'sinon-chai': '^2.8.0',
+21 silly publish      'source-map-loader': '^0.1.5',
+21 silly publish      'style-loader': '^0.13.1',
+21 silly publish      typescript: '^2.0.1',
+21 silly publish      'url-loader': '^0.5.7',
+21 silly publish      webpack: '^1.13.0',
+21 silly publish      'webpack-dev-server': '^1.14.1' },
+21 silly publish   readme: '#ng-bs-switch\n\nA switch directive for angular 1.5, with bootstrap\n\nThis directive has no other dependencies except angular and boostrap.\n\n##Usage\n\n###Install\n\n```\nnpm install @ngfancy/ng-bs-switch --save\n```\n\nimport `ngBsSwitch` as angular module name.\n\n```js\nimport {ngBsSwitch} from \'ng-bs-switch\';\n\nangular.module(\'app\', [ngBsSwitch])\n    .component(\'app\', {\n        controller: () => {\n            this.checked = false;\n        },\n        template: require(\'./app.html\')\n    });\n```\n\n```html\n<ng-bs-switch on-text="\'ON\'" off-text="\'OFF\'" ng-model="$ctrl.checked"></ng-bs-switch>\n```\n\n###API\n\nall the attributes are one-way binding\n\n`on-text`\n\npositive text on label\n\n`off-text`\n\nnegative text on label\n\n`on-text-style`\n\npositive label class, can be `default` `primary` `info` `success` `warning` `error`, default is `primary`\n\n`off-text-style`\n\nnegative label class, can be `default` `primary` `info` `success` `warning` `error`, default is `default`\n\n`button-width`\n\ncustom button width, unit is px, value type is integer\n\n`label-width`\n\ncustom label width, unit is px, value type is integer\n\n`size`\n\nthe switch size, similar to button sizing class, can be `lg` `sm` `xs`, default is none of these\n\n`disabled`\n\ndisable the switch',
+21 silly publish   readmeFilename: 'README.md',
+21 silly publish   gitHead: '245f568e753ac238a2bf5bdcbedd52fb7d593038',
+21 silly publish   _id: '@ngfancy/ng-bs-switch@1.0.2',
+21 silly publish   _shasum: 'f2cb020716f1e499ebd446441084105d1a5dc5db',
+21 silly publish   _from: '.' }
+22 verbose getPublishConfig undefined
+23 silly mapToRegistry name @ngfancy/ng-bs-switch
+24 silly mapToRegistry scope (from package name) @ngfancy
+25 verbose mapToRegistry no registry URL found in name for scope @ngfancy
+26 silly mapToRegistry using default registry
+27 silly mapToRegistry registry https://registry.npmjs.org/
+28 silly mapToRegistry data Result {
+28 silly mapToRegistry   raw: '@ngfancy/ng-bs-switch',
+28 silly mapToRegistry   scope: '@ngfancy',
+28 silly mapToRegistry   name: '@ngfancy/ng-bs-switch',
+28 silly mapToRegistry   rawSpec: '',
+28 silly mapToRegistry   spec: 'latest',
+28 silly mapToRegistry   type: 'tag' }
+29 silly mapToRegistry uri https://registry.npmjs.org/@ngfancy%2fng-bs-switch
+30 verbose publish registryBase https://registry.npmjs.org/
+31 silly publish uploading /Users/bob/.npm/@ngfancy/ng-bs-switch/1.0.2/package.tgz
+32 verbose request uri https://registry.npmjs.org/@ngfancy%2fng-bs-switch
+33 verbose request sending authorization for write operation
+34 info attempt registry request try #1 at 4:41:00 PM
+35 verbose request using bearer token for auth
+36 verbose request id e811ab40635a6394
+37 http request PUT https://registry.npmjs.org/@ngfancy%2fng-bs-switch
+38 http 403 https://registry.npmjs.org/@ngfancy%2fng-bs-switch
+39 verbose headers { 'content-type': 'application/json',
+39 verbose headers   'cache-control': 'max-age=0',
+39 verbose headers   'content-length': '95',
+39 verbose headers   'accept-ranges': 'bytes',
+39 verbose headers   date: 'Mon, 12 Sep 2016 08:41:01 GMT',
+39 verbose headers   via: '1.1 varnish',
+39 verbose headers   connection: 'keep-alive',
+39 verbose headers   'x-served-by': 'cache-itm7424-ITM',
+39 verbose headers   'x-cache': 'MISS',
+39 verbose headers   'x-cache-hits': '0',
+39 verbose headers   'x-timer': 'S1473669661.248721,VS0,VE656' }
+40 verbose request invalidating /Users/bob/.npm/registry.npmjs.org/_40ngfancy_252fng-bs-switch on PUT
+41 error publish Failed PUT 403
+42 verbose stack Error: "You cannot publish over the previously published version 1.0.2." : @ngfancy/ng-bs-switch
+42 verbose stack     at makeError (/Users/bob/.nvm/versions/node/v5.5.0/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+42 verbose stack     at CachingRegistryClient.<anonymous> (/Users/bob/.nvm/versions/node/v5.5.0/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:252:14)
+42 verbose stack     at Request._callback (/Users/bob/.nvm/versions/node/v5.5.0/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+42 verbose stack     at Request.self.callback (/Users/bob/.nvm/versions/node/v5.5.0/lib/node_modules/npm/node_modules/request/request.js:200:22)
+42 verbose stack     at emitTwo (events.js:100:13)
+42 verbose stack     at Request.emit (events.js:185:7)
+42 verbose stack     at Request.<anonymous> (/Users/bob/.nvm/versions/node/v5.5.0/lib/node_modules/npm/node_modules/request/request.js:1067:10)
+42 verbose stack     at emitOne (events.js:95:20)
+42 verbose stack     at Request.emit (events.js:182:7)
+42 verbose stack     at IncomingMessage.<anonymous> (/Users/bob/.nvm/versions/node/v5.5.0/lib/node_modules/npm/node_modules/request/request.js:988:12)
+43 verbose statusCode 403
+44 verbose pkgid @ngfancy/ng-bs-switch
+45 verbose cwd /Users/bob/WebstormProjects/ng-bs-switch
+46 error Darwin 15.6.0
+47 error argv "/Users/bob/.nvm/versions/node/v5.5.0/bin/node" "/Users/bob/.nvm/versions/node/v5.5.0/bin/npm" "publish" "--access" "public"
+48 error node v5.5.0
+49 error npm  v3.8.9
+50 error code E403
+51 error "You cannot publish over the previously published version 1.0.2." : @ngfancy/ng-bs-switch
+52 error If you need help, you may report this error at:
+52 error     <https://github.com/npm/npm/issues>
+53 verbose exit [ 1, true ]

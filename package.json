@@ -1,6 +1,6 @@
 {
     "name": "@ngfancy/ng-bs-switch",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "A switch for angular with bootstrap",
     "main": "dist/ng-bs-switch.js",
     "scripts": {
