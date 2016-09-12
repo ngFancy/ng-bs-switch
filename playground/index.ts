@@ -14,6 +14,7 @@ angular.module('appModule', [ngBsSwitch])
             this.labelClass = 'warning';
             this.labelOnText = 'ON';
             this.labelOffText = 'OFF';
+            this.disabled = true;
         },
         template: require('./app.html')
     });

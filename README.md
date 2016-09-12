@@ -29,3 +29,39 @@ angular.module('app', [ngBsSwitch])
 ```html
 <ng-bs-switch on-text="'ON'" off-text="'OFF'" ng-model="$ctrl.checked"></ng-bs-switch>
 ```
+
+###API
+
+all the attributes are one-way binding
+
+`on-text`
+
+positive text on label
+
+`off-text`
+
+negative text on label
+
+`on-text-style`
+
+positive label class, can be `default` `primary` `info` `success` `warning` `error`, default is `primary`
+
+`off-text-style`
+
+negative label class, can be `default` `primary` `info` `success` `warning` `error`, default is `default`
+
+`button-width`
+
+custom button width, unit is px, value type is integer
+
+`label-width`
+
+custom label width, unit is px, value type is integer
+
+`size`
+
+the switch size, similar to button sizing class, can be `lg` `sm` `xs`, default is none of these
+
+`disabled`
+
+disable the switch

@@ -78,4 +78,18 @@
   &.xs {
     @include switch-size($padding-xs-vertical, $padding-xs-horizontal, $font-size-small, $line-height-small, $btn-border-radius-small);
   }
+
+  &.disabled {
+    .switch-button {
+      opacity: 0.5;
+    }
+    .switch-label {
+      opacity: 0.5;
+    }
+    &:focus {
+      border-color: transparent;
+      outline: 0;
+      @include box-shadow(none);
+    }
+  }
 }

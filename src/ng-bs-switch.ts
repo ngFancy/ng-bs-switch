@@ -5,7 +5,7 @@ export class NgBsSwitch implements angular.IComponentController {
     static $inject = ['$timeout', '$element'];
 
     isChecked: boolean;
-    isDisabled: boolean;
+    disabled: boolean;
 
     ngModelCtrl: angular.INgModelController = null;
 
@@ -35,7 +35,6 @@ export class NgBsSwitch implements angular.IComponentController {
     private rootElement: HTMLElement;
 
     constructor(private $timeout, private $element) {
-        console.log('new instance');
     }
 
     resize() {
@@ -56,7 +55,6 @@ export class NgBsSwitch implements angular.IComponentController {
             this.buttonWidth = rootElement.querySelector('.switch-button').clientWidth;
         }
         this.containerWidth = this.labelWidth + this.buttonWidth;
-        console.log(this.labelWidth, this.buttonWidth, this.containerWidth);
     }
 
     bindNgModelCtrl(ngModelCtrl: angular.INgModelController) {
@@ -72,7 +70,7 @@ export class NgBsSwitch implements angular.IComponentController {
     }
 
     onClick() {
-        if (!this.isDisabled) {
+        if (!this.disabled) {
             this.isChecked = !this.isChecked;
             this.ngModelCtrl.$setViewValue(this.isChecked);
         }
@@ -80,7 +78,7 @@ export class NgBsSwitch implements angular.IComponentController {
 
     $onInit() {
         this.isChecked = angular.isUndefined(this.isChecked) ? false : this.isChecked;
-        this.isDisabled = angular.isUndefined(this.isDisabled) ? false : this.isDisabled;
+        this.disabled = angular.isUndefined(this.disabled) ? false : this.disabled;
 
         this.offTextStyle = angular.isUndefined(this.offTextStyle) ? 'default' : this.offTextStyle;
         this.onTextStyle = angular.isUndefined(this.onTextStyle) ? 'primary' : this.onTextStyle;
@@ -112,9 +110,9 @@ export const ngBsSwitch = angular.module('ngFancy.ngBsSwitch', [])
             template: `
                 <span class="ng-bs-switch-container" 
                       ng-click="$ctrl.onClick()" 
-                      ng-class="[{checked: $ctrl.isChecked}, $ctrl.size]"
+                      ng-class="[{checked: $ctrl.isChecked, disabled: $ctrl.disabled}, $ctrl.size]"
                       ng-style="{width: $ctrl.containerDimension}"
-                      tabindex="0"><!--
+                      tabindex="{{$ctrl.disabled ? '-1': '0'}}"><!--
                  --><span class="switch-wrapper"
                           ng-class="{animated: $ctrl.animated}"
                           ng-style="{left: $ctrl.wrapperOffset}"><!--
@@ -136,7 +134,8 @@ export const ngBsSwitch = angular.module('ngFancy.ngBsSwitch', [])
                 'offTextStyle': '<?',
                 'buttonWidth': '<?',
                 'labelWidth': '<?',
-                'size': '<?'
+                'size': '<?',
+                'disabled': '<?'
             },
             require: ['ngModel', 'ngBsSwitch'],
             link: (scope, element, attr, ctrls) => {
