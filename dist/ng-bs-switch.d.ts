@@ -4,7 +4,7 @@ export declare class NgBsSwitch implements angular.IComponentController {
     private $element;
     static $inject: string[];
     isChecked: boolean;
-    isDisabled: boolean;
+    disabled: boolean;
     ngModelCtrl: angular.INgModelController;
     offTextStyle: string;
     onTextStyle: string;

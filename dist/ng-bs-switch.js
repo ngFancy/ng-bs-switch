@@ -62,7 +62,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	        this.$element = $element;
 	        this.ngModelCtrl = null;
 	        this.animated = false;
-	        console.log('new instance');
 	    }
 	    Object.defineProperty(NgBsSwitch.prototype, "labelDimension", {
 	        get: function () {
@@ -102,7 +101,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	            this.buttonWidth = rootElement.querySelector('.switch-button').clientWidth;
 	        }
 	        this.containerWidth = this.labelWidth + this.buttonWidth;
-	        console.log(this.labelWidth, this.buttonWidth, this.containerWidth);
 	    };
 	    NgBsSwitch.prototype.bindNgModelCtrl = function (ngModelCtrl) {
 	        var _this = this;
@@ -116,14 +114,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	        this.$timeout(this.calculateDimension.bind(this));
 	    };
 	    NgBsSwitch.prototype.onClick = function () {
-	        if (!this.isDisabled) {
+	        if (!this.disabled) {
 	            this.isChecked = !this.isChecked;
 	            this.ngModelCtrl.$setViewValue(this.isChecked);
 	        }
 	    };
 	    NgBsSwitch.prototype.$onInit = function () {
 	        this.isChecked = angular.isUndefined(this.isChecked) ? false : this.isChecked;
-	        this.isDisabled = angular.isUndefined(this.isDisabled) ? false : this.isDisabled;
+	        this.disabled = angular.isUndefined(this.disabled) ? false : this.disabled;
 	        this.offTextStyle = angular.isUndefined(this.offTextStyle) ? 'default' : this.offTextStyle;
 	        this.onTextStyle = angular.isUndefined(this.onTextStyle) ? 'primary' : this.onTextStyle;
 	    };
@@ -150,7 +148,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        restrict: 'E',
 	        controller: NgBsSwitch,
 	        controllerAs: '$ctrl',
-	        template: "\n                <span class=\"ng-bs-switch-container\" \n                      ng-click=\"$ctrl.onClick()\" \n                      ng-class=\"[{checked: $ctrl.isChecked}, $ctrl.size]\"\n                      ng-style=\"{width: $ctrl.containerDimension}\"\n                      tabindex=\"0\"><!--\n                 --><span class=\"switch-wrapper\"\n                          ng-class=\"{animated: $ctrl.animated}\"\n                          ng-style=\"{left: $ctrl.wrapperOffset}\"><!--\n                     --><span class=\"on-text switch-label\"\n                              ng-class=\"$ctrl.onTextStyle\"\n                              ng-style=\"{width: $ctrl.labelDimension}\">{{$ctrl.onText}}</span><!--\n                     --><span class=\"switch-button\"></span><!--\n                     --><span class=\"off-text switch-label\"\n                              ng-class=\"$ctrl.offTextStyle\"\n                              ng-style=\"{width: $ctrl.labelDimension}\">{{$ctrl.offText}}</span><!--\n                 --></span><!--\n             --></span>\n            ",
+	        template: "\n                <span class=\"ng-bs-switch-container\" \n                      ng-click=\"$ctrl.onClick()\" \n                      ng-class=\"[{checked: $ctrl.isChecked, disabled: $ctrl.disabled}, $ctrl.size]\"\n                      ng-style=\"{width: $ctrl.containerDimension}\"\n                      tabindex=\"{{$ctrl.disabled ? '-1': '0'}}\"><!--\n                 --><span class=\"switch-wrapper\"\n                          ng-class=\"{animated: $ctrl.animated}\"\n                          ng-style=\"{left: $ctrl.wrapperOffset}\"><!--\n                     --><span class=\"on-text switch-label\"\n                              ng-class=\"$ctrl.onTextStyle\"\n                              ng-style=\"{width: $ctrl.labelDimension}\">{{$ctrl.onText}}</span><!--\n                     --><span class=\"switch-button\"></span><!--\n                     --><span class=\"off-text switch-label\"\n                              ng-class=\"$ctrl.offTextStyle\"\n                              ng-style=\"{width: $ctrl.labelDimension}\">{{$ctrl.offText}}</span><!--\n                 --></span><!--\n             --></span>\n            ",
 	        scope: {},
 	        bindToController: {
 	            'offText': '<?',
@@ -159,7 +157,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	            'offTextStyle': '<?',
 	            'buttonWidth': '<?',
 	            'labelWidth': '<?',
-	            'size': '<?'
+	            'size': '<?',
+	            'disabled': '<?'
 	        },
 	        require: ['ngModel', 'ngBsSwitch'],
 	        link: function (scope, element, attr, ctrls) {

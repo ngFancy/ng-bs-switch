@@ -107,3 +107,12 @@
       padding: 1px 5px;
       font-size: 12px;
       line-height: 21px; }
+  .ng-bs-switch-container.disabled .switch-button {
+    opacity: 0.5; }
+  .ng-bs-switch-container.disabled .switch-label {
+    opacity: 0.5; }
+  .ng-bs-switch-container.disabled:focus {
+    border-color: transparent;
+    outline: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none; }
